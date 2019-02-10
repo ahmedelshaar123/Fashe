@@ -1,0 +1,41 @@
+<?php include "des_includes/header.php"; ?>
+<?php include "des_includes/nav.php"; ?>
+<?php include "des_includes/sidebar.php"; ?>
+<?php include "fun/connect.php"; ?>
+
+
+
+
+
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Dashboard</li>
+			</ol>
+		</div><!--/.row-->
+
+		<?php
+			if(!$_GET['do']){
+				include "includes/view_blog.php";
+			}elseif($_GET['do']=="add"){
+				include "includes/add_blog.php";
+			}elseif ($_GET['do']=="edit") {
+				include "includes/edit_blog.php";
+			}
+
+
+
+
+		?>
+
+
+
+
+
+
+
+<?php include "des_includes/footer.php"; ?>
